@@ -13,8 +13,9 @@ git checkout $version
 
 swift build -c release
 
-sudo rm -rf /opt/bin/swift-formats
-sudo cp .build/out/Products/Release/swift-format /opt/bin/swift-format
+out=~/.local/bin/swift-format
+rm -rf $out
+cp .build/out/Products/Release/swift-format $out
 
 cd ..
 rm -rf swift-format/
